@@ -38,22 +38,24 @@ A pixel-perfect, fully responsive recreation of the **Medicare** healthcare land
 
 ### Prerequisites
 
-- **Node.js 18+** and **npm 9+**
+- **Node.js 18+** and **[pnpm](https://pnpm.io) 9+** (this project uses pnpm as its package manager)
+
+> Don't have pnpm? Enable it with Corepack (bundled with Node): `corepack enable pnpm`
 
 ### Installation
 
 ```bash
 # 1. Install dependencies
-npm install
+pnpm install
 
 # 2. Start the dev server (http://localhost:5173)
-npm run dev
+pnpm dev
 
 # 3. Create a production build (outputs to /dist)
-npm run build
+pnpm build
 
 # 4. Preview the production build locally
-npm run preview
+pnpm preview
 ```
 
 ---
@@ -125,9 +127,9 @@ This app is a static SPA. It deploys to **Cloudflare Workers** (static assets) f
 1. Push this repo to GitHub.
 2. In the Cloudflare dashboard connect the repository with:
    - **Framework:** `Vite`
-   - **Build command:** `npm run build`
+   - **Build command:** `pnpm run build`
    - **Output directory:** `dist`
-3. Deploy. Cloudflare builds with Vite 6+ and serves the assets on a `*.workers.dev` URL.
+3. Deploy. Cloudflare detects `pnpm-lock.yaml`, installs with pnpm, builds with Vite 6+, and serves the assets on a `*.workers.dev` URL.
 
 > **SPA routing** is handled by the Worker's `assets.not_found_handling: "single-page-application"`
 > setting (added by Cloudflare's Vite auto-configuration), so no `_redirects` file is needed —
@@ -137,7 +139,7 @@ This app is a static SPA. It deploys to **Cloudflare Workers** (static assets) f
 
 ### Cloudflare Pages (alternative)
 
-The build also works on Pages — set build command `npm run build` and output directory `dist`.
+The build also works on Pages — set build command `pnpm run build` and output directory `dist`.
 
 ---
 
@@ -152,12 +154,3 @@ The build also works on Pages — set build command `npm run build` and output d
 
 ---
 
-## 📸 Image Credits
-
-People photography is loaded from [Unsplash](https://unsplash.com) via their CDN for demonstration purposes. Swap the URLs in `src/data/content.js` and `src/components/sections/Hero.jsx` for your own licensed assets in production.
-
----
-
-## 📄 License
-
-Provided for evaluation/demonstration purposes.

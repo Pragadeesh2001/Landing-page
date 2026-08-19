@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Pixel-perfect, responsive Medicare healthcare landing page built with React, Vite, Tailwind CSS and Framer Motion.",
+  "packageManager": "pnpm@10.28.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
