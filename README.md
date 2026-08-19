@@ -2,7 +2,7 @@
 
 A pixel-perfect, fully responsive recreation of the **Medicare** healthcare landing page, built with React, Vite, Tailwind CSS and Framer Motion. It ships with dark/light mode, scroll-reveal animations, smooth scrolling, and an accessibility-first, component-driven architecture.
 
-![Tech](https://img.shields.io/badge/React-18-61dafb) ![Vite](https://img.shields.io/badge/Vite-5-646cff) ![Tailwind](https://img.shields.io/badge/Tailwind-3-38bdf8) ![Framer Motion](https://img.shields.io/badge/Framer_Motion-11-ff0080)
+![Tech](https://img.shields.io/badge/React-18-61dafb) ![Vite](https://img.shields.io/badge/Vite-6-646cff) ![Tailwind](https://img.shields.io/badge/Tailwind-3-38bdf8) ![Framer Motion](https://img.shields.io/badge/Framer_Motion-11-ff0080) ![pnpm](https://img.shields.io/badge/pnpm-10-f69220)
 
 ---
 
@@ -10,7 +10,7 @@ A pixel-perfect, fully responsive recreation of the **Medicare** healthcare land
 
 - **Pixel-perfect UI** — recreates every section of the reference design: hero, benefits/features, trusted-by logos, consultants, additional medical features, CTA, and footer.
 - **Fully responsive** — mobile, tablet and desktop layouts using a fluid, mobile-first grid.
-- **Dark / Light mode** — respects the OS `prefers-color-scheme` on first load, with a toggle that persists the choice in `localStorage`.
+- **Dark / Light mode** — defaults to light to match the reference design, with a toggle that persists the choice in `localStorage`.
 - **Framer Motion animations** — scroll-reveal, floating hero UI cards, animated chart bars, and micro-interactions on buttons.
 - **Smooth scrolling** — anchor navigation scrolls smoothly to each section.
 - **Accessibility** — semantic HTML5 landmarks, skip-to-content link, labeled form controls, `aria-*` attributes, visible focus rings, and full `prefers-reduced-motion` support.
@@ -24,11 +24,12 @@ A pixel-perfect, fully responsive recreation of the **Medicare** healthcare land
 | Concern        | Choice                          |
 | -------------- | ------------------------------- |
 | Framework      | React 18 (functional components + hooks) |
-| Build tool     | Vite 5                          |
+| Build tool     | Vite 6                          |
+| Package manager| pnpm                            |
 | Styling        | Tailwind CSS 3                   |
 | Animation      | Framer Motion 11                |
 | Icons          | lucide-react                    |
-| Deployment     | Cloudflare Pages                |
+| Deployment     | Cloudflare Workers              |
 
 > React Router was intentionally **not** included — the design is a single-page site with in-page anchor navigation, so a router would be an unnecessary dependency.
 
