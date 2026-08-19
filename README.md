@@ -116,28 +116,28 @@ Dark mode uses Tailwind's `class` strategy, toggled on `<html>` by `ThemeContext
 
 ---
 
-## ☁️ Deployment (Cloudflare Pages)
+## ☁️ Deployment (Cloudflare)
 
-This app is a static SPA and deploys to **Cloudflare Pages** with zero config changes.
+This app is a static SPA. It deploys to **Cloudflare Workers** (static assets) from a Git-connected project.
 
-### Option A — Dashboard (Git integration)
+### Cloudflare Workers (Git integration)
 
 1. Push this repo to GitHub.
-2. In the Cloudflare dashboard: **Workers & Pages → Create → Pages → Connect to Git**.
-3. Select the repository and use these build settings:
-   - **Framework preset:** `Vite`
+2. In the Cloudflare dashboard connect the repository with:
+   - **Framework:** `Vite`
    - **Build command:** `npm run build`
-   - **Build output directory:** `dist`
-4. Deploy. Cloudflare builds and serves the site on a `*.pages.dev` URL.
+   - **Output directory:** `dist`
+3. Deploy. Cloudflare builds with Vite 6+ and serves the assets on a `*.workers.dev` URL.
 
-The included [`public/_redirects`](./public/_redirects) file (`/* /index.html 200`) ensures deep links resolve correctly.
+> **SPA routing** is handled by the Worker's `assets.not_found_handling: "single-page-application"`
+> setting (added by Cloudflare's Vite auto-configuration), so no `_redirects` file is needed —
+> and in fact a `/* /index.html 200` rule is rejected by the Workers asset engine as an infinite loop.
 
-### Option B — Wrangler CLI
+> **Requires Vite ≥ 6** — Cloudflare's Vite auto-configuration cannot configure older Vite versions.
 
-```bash
-npm run build
-npx wrangler pages deploy dist --project-name medicare-landing
-```
+### Cloudflare Pages (alternative)
+
+The build also works on Pages — set build command `npm run build` and output directory `dist`.
 
 ---
 
