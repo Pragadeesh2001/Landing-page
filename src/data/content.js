@@ -35,7 +35,7 @@ export const consultants = [
     description:
       'Offer programs focused on preventive care, nutrition, exercise and wellness.',
     image:
-      'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=320&q=70',
+      'https://images.unsplash.com/photo-1638202993928-7267aad84c31?auto=format&fit=crop&crop=faces&w=480&h=360&q=75',
   },
   {
     name: 'Nguyen',
@@ -43,7 +43,7 @@ export const consultants = [
     description:
       'Offer programs focused on preventive care, nutrition, exercise and wellness.',
     image:
-      'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=320&q=70',
+      'https://images.unsplash.com/photo-1618498082410-b4aa22193b38?auto=format&fit=crop&crop=faces&w=480&h=360&q=75',
   },
   {
     name: 'Flores',
@@ -51,7 +51,7 @@ export const consultants = [
     description:
       'Offer programs focused on preventive care, nutrition, exercise and wellness.',
     image:
-      'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=320&q=70',
+      'https://images.unsplash.com/photo-1584467735815-f778f274e296?auto=format&fit=crop&crop=faces&w=480&h=360&q=75',
   },
 ]
 

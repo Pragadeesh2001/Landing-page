@@ -8,7 +8,9 @@ function getInitialTheme() {
   if (typeof window === 'undefined') return 'light'
   const stored = window.localStorage.getItem(STORAGE_KEY)
   if (stored === 'light' || stored === 'dark') return stored
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  // Default to light to match the reference design; users can still opt into
+  // dark via the toggle, and their choice is persisted.
+  return 'light'
 }
 
 export function ThemeProvider({ children }) {
